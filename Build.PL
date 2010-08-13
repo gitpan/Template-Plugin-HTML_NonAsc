@@ -1,0 +1,18 @@
+use strict;
+use warnings;
+use Module::Build;
+
+my $builder = Module::Build->new(
+    module_name         => 'Template::Plugin::HTML_NonAsc',
+    license             => 'perl',
+    dist_author         => 'Johan Vromans <jv@cpan.org>',
+    dist_version_from   => 'lib/Template/Plugin/HTML_NonAsc.pm',
+    build_requires => {
+        'Test::More' => 0,
+	'Template' => 0.22,
+    },
+    add_to_cleanup      => [ 'Template-Plugin-HTML_NonAsc-*' ],
+    create_makefile_pl => 'traditional',
+);
+
+$builder->create_build_script();
