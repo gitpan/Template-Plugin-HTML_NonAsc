@@ -3,8 +3,8 @@
 # Author          : Johan Vromans
 # Created On      : Fri Aug  5 20:19:18 2010
 # Last Modified By: Johan Vromans
-# Last Modified On: Fri Aug 13 22:12:19 2010
-# Update Count    : 25
+# Last Modified On: Sat Aug 14 20:27:04 2010
+# Update Count    : 28
 # Status          : Unknown, Use with caution!
 
 =head1 NAME
@@ -16,7 +16,7 @@ Template::Plugin::HTML_NonAsc - Slightly less picky html filter.
 This filter behaves like the builtin html filter except that it does
 B<not> escape ASCII characters, I<including C<< < >>, C<< > >>, C<< & >>,
 and C<< " >>>. This makes it possible to write templates in HTML using
-Unicode characters. Pass the contents through this filter and all
+non-ASCII characters. Pass the contents through this filter and all
 non-ASCII characters will be escaped using HTML entities.
 
 The best place to apply this filter is in your page/wrapper:
@@ -37,12 +37,13 @@ The best place to apply this filter is in your page/wrapper:
 
 =cut
 
+use 5.008003;
 use strict;
 use warnings;
 
 package Template::Plugin::HTML_NonAsc;
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 use base qw( Template::Plugin::Filter );
 

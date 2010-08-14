@@ -1,3 +1,10 @@
+#! perl
+
+# Ease the life of the CPAN testers.
+exit 0 if $ENV{AUTOMATED_TESTING} && $] < 5.008003;
+
+use 5.008003;			# for sane Unicode handling
+
 use strict;
 use warnings;
 use Module::Build;

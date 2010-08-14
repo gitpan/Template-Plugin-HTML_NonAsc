@@ -6,7 +6,7 @@ It resembles the builtin 'html' filter but it only processes non-ASCII
 characters. In particular, it leaves characters like < > & and " alone.
 
 Its purpose is to make it possible to write HTML templates using
-Unicode characters, and still produce HTML with &entities; to avoid
+non-ASCII characters, and still produce HTML with &entities; to avoid
 portability problems.
 
 INSTALLATION
