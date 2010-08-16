@@ -3,8 +3,8 @@
 # Author          : Johan Vromans
 # Created On      : Fri Aug  5 20:19:18 2010
 # Last Modified By: Johan Vromans
-# Last Modified On: Sat Aug 14 20:27:04 2010
-# Update Count    : 28
+# Last Modified On: Mon Aug 16 07:53:45 2010
+# Update Count    : 29
 # Status          : Unknown, Use with caution!
 
 =head1 NAME
@@ -43,7 +43,7 @@ use warnings;
 
 package Template::Plugin::HTML_NonAsc;
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 use base qw( Template::Plugin::Filter );
 

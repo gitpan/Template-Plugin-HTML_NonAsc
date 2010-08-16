@@ -9,6 +9,7 @@ WriteMakefile
           'VERSION_FROM' => 'lib/Template/Plugin/HTML_NonAsc.pm',
           'PREREQ_PM' => {
                            'Test::More' => 0,
+                           'HTML::Entities' => 0,
                            'Template' => '0.22'
                          }
         )

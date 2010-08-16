@@ -14,8 +14,13 @@ my $builder = Module::Build->new(
     license             => 'perl',
     dist_author         => 'Johan Vromans <jv@cpan.org>',
     dist_version_from   => 'lib/Template/Plugin/HTML_NonAsc.pm',
+    requires => {
+        'HTML::Entities' => 0,
+	'Template' => 0.22,
+    },
     build_requires => {
         'Test::More' => 0,
+        'HTML::Entities' => 0,
 	'Template' => 0.22,
     },
     add_to_cleanup      => [ 'Template-Plugin-HTML_NonAsc-*' ],
